@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Daily Swayze</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Daily Swayze"/>
+        <meta name="keywords" content="crazy for swayze"/>
+        <meta property="og:title" content="Daily Swayze"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="Crazy for Swayze"/>
+        <meta property="og:url" content="https://dailyswayze.com"/>
+        <meta property="og:image" content="https://dailyswayze.com/images/swayze.png"/>
+        <meta property="og:site_name" content="dailyswayze.com"/>
+
+        <meta http-equiv="refresh" content="10; url=//dailyswayze.com"/>
+
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="css/style.css">
+        <script>
+            // Total Swayzes
+            var total_swayzes = 21;
+
+            // Get a random Swayze
+            function getRndSwayze() {
+                swayze = "images/gifs/" + (Math.floor(Math.random() * total_swayzes) + 1) + ".gif";
+                console.log(swayze);
+                return swayze;
+            }
+
+            // Set image src for Swayze
+            function setSwayze() {
+                document.getElementById("gif-frame").src = getRndSwayze();
+            }
+        </script>
+    </head>
+
+    <body onload="setSwayze();">
+
+        <div id="dumb-circle" onclick="window.open('https://dumbprojects.com', '_blank');"></div>
+
+        <div id="main-frame">
+            <img onclick="location.href='//dailyswayze.com';" id="gif-frame" src="javascript:void(0)" alt="Daily Swayze"/>
+        </div>
+
+        <div id="social">
+            <!-- AddToAny BEGIN -->
+            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_twitter"></a>
+            </div>
+            <script src="//static.addtoany.com/menu/page.js"></script>
+            <!-- AddToAny END -->
+        </div>
+
+        <!-- Default Statcounter code for Dailyswayze.com https://dailyswayze.com/ -->
+        <script>
+            var sc_project = 12074547;
+            var sc_invisible = 1;
+            var sc_security = "d7607572";
+        </script>
+        <script src="https://www.statcounter.com/counter/counter.js" async></script>
+        <noscript>
+            <div class="statcounter">
+                <a title="Web Analytics" href="https://statcounter.com/" target="_blank">
+                    <img class="statcounter" src="https://c.statcounter.com/12074547/0/d7607572/1/" alt="Web Analytics">
+                </a>
+            </div>
+        </noscript>
+        <!-- End of Statcounter Code -->
+    </body>
+</html>
