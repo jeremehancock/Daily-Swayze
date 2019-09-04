@@ -49,7 +49,7 @@
                 let elem = document.createElement("div");
                 elem.setAttribute("id", "gif-frame");
                 document.getElementById("main-frame").appendChild(elem);
-                document.getElementById("gif-frame").style.backgroundImage = "url(" + getRndSwayze() + ")";
+                resetSwayze();
                 document.getElementById("gif-frame").onclick = function() { resetSwayze() };
 
                 setInterval(function(){ resetSwayze(); }, 10000);
