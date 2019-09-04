@@ -41,13 +41,17 @@
             // Get a random Swayze
             function getRndSwayze() {
                 swayze = "images/gifs/" + (Math.floor(Math.random() * total_swayzes) + 1) + ".gif";
-                console.log(swayze);
                 return swayze;
             }
 
             // Set image src for Swayze
             function setSwayze() {
-                document.getElementById("gif-frame").src = getRndSwayze();
+                let elem = document.createElement("img");
+                elem.setAttribute("src", getRndSwayze());
+                elem.setAttribute("alt", "Daily Swayze");
+                elem.setAttribute("onclick", "location.href='//dailyswayze.com'");
+                elem.setAttribute("id", "gif-frame");
+                document.getElementById("main-frame").appendChild(elem);
             }
         </script>
     </head>
@@ -56,9 +60,7 @@
 
         <div id="dumb-circle" onclick="window.open('https://dumbprojects.com', '_blank');"></div>
 
-        <div id="main-frame">
-            <img onclick="location.href='//dailyswayze.com';" id="gif-frame" src="javascript:void(0)" alt="Daily Swayze"/>
-        </div>
+        <div id="main-frame"></div>
 
         <div id="social">
             <!-- AddToAny BEGIN -->
