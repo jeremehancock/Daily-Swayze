@@ -13,7 +13,7 @@
         <meta property="og:image" content="https://dailyswayze.com/images/swayze.png"/>
         <meta property="og:site_name" content="dailyswayze.com"/>
 
-        <meta http-equiv="refresh" content="10; url=//dailyswayze.com"/>
+<!--        <meta http-equiv="refresh" content="10; url=https://dailyswayze.com"/>-->
 
         <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
@@ -46,12 +46,13 @@
 
             // Set image src for Swayze
             function setSwayze() {
-                let elem = document.createElement("img");
-                elem.setAttribute("src", getRndSwayze());
-                elem.setAttribute("alt", "Daily Swayze");
-                elem.setAttribute("onclick", "location.href='//dailyswayze.com'");
+                let elem = document.createElement("div");
+                elem.setAttribute("onclick", "location.href='https://dailyswayze.com'");
                 elem.setAttribute("id", "gif-frame");
                 document.getElementById("main-frame").appendChild(elem);
+                document.getElementById("gif-frame").style.backgroundImage = "url(" + getRndSwayze() + ")";
+
+                setInterval(function(){ document.getElementById("gif-frame").style.backgroundImage = "url(" + getRndSwayze() + ")"; }, 10000);
             }
         </script>
     </head>
