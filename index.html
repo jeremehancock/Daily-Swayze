@@ -44,15 +44,20 @@
                 return swayze;
             }
 
-            // Set image src for Swayze
+            // Set Swayze
             function setSwayze() {
                 let elem = document.createElement("div");
-                elem.setAttribute("onclick", "location.href='https://dailyswayze.com'");
                 elem.setAttribute("id", "gif-frame");
                 document.getElementById("main-frame").appendChild(elem);
                 document.getElementById("gif-frame").style.backgroundImage = "url(" + getRndSwayze() + ")";
+                document.getElementById("gif-frame").onclick = function() { resetSwayze() };
 
-                setInterval(function(){ document.getElementById("gif-frame").style.backgroundImage = "url(" + getRndSwayze() + ")"; }, 10000);
+                setInterval(function(){ resetSwayze(); }, 10000);
+            }
+
+            // Reset Swayze
+            function resetSwayze() {
+                document.getElementById("gif-frame").style.backgroundImage = "url(" + getRndSwayze() + ")";
             }
         </script>
     </head>
