@@ -36,6 +36,14 @@
             // Total Swayzes
             var total_swayzes = 35;
 
+            // Swayze Timer
+            var swayzeInterval;
+
+            function swayzeTimer() {
+                clearInterval(swayzeInterval);
+                swayzeInterval = setInterval(function(){ resetSwayze(); }, 10000);
+            }
+
             // Get a random Swayze
             function getRndSwayze() {
                 swayze = "images/gifs/" + (Math.floor(Math.random() * total_swayzes) + 1) + ".gif";
@@ -50,11 +58,12 @@
                 resetSwayze();
                 document.getElementById("gif-frame").onclick = function() { resetSwayze() };
 
-                setInterval(function(){ resetSwayze(); }, 10000);
+                swayzeTimer();
             }
 
             // Reset Swayze
             function resetSwayze() {
+                swayzeTimer();
                 document.getElementById("gif-frame").style.backgroundImage = "url(" + getRndSwayze() + ")";
             }
         </script>
