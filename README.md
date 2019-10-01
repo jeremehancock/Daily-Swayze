@@ -2,4 +2,4 @@
 
 [Daily Swayze](https://dailyswayze.com)
 
-![alt text](https://dumbprojects.com/images/daily-swayze.png "Daily Swayze")
+![Daily Swayze](https://dumbprojects.com/images/projects/daily-swayze.png "Daily Swayze")
